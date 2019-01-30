@@ -15,12 +15,12 @@ public class MainController {
     @Autowired
     private UserRepository userRepository;
 
+
     @GetMapping("/")
     public ResponseEntity count(){
         return ResponseEntity.ok(userRepository.getAllUser());
     }
 
-    
     @GetMapping("/userById")
     public ResponseEntity userById(@RequestParam(name = "id")int id){
         return ResponseEntity.ok(userRepository.getUserById(2));
